@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: usuario-serverless
+spec:
+  template:
+    spec:
+      containers:
+        - image: azuniga1988/usuario-service:3.0
+          ports:
+            - containerPort: 8082
+
